@@ -2,7 +2,7 @@
 
 -   authors: Steven Leung, Sam Quist, Brandon Lam, Ruben De la Garza Macias
 
-Data analysis project for DSCI 522 (Data Science workflows); a course in the Master of Data Science program at the University of British Columbia.
+Data analysis project for DSCI 522 (Data Science workflows); a course in the Master of Data Science program at the University of British Columbia .
 
 ## Introduction
 
