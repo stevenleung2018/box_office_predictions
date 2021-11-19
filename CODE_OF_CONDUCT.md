@@ -6,41 +6,41 @@ editor_options:
 
 # Code of Conduct
 
-The Python community is made up of members from around the globe with a
+The project team is made up of members from around the globe with a
 diverse set of skills, personalities, and experiences. It is through
 these differences that our community experiences great successes and
 continued growth. When you're working with members of the community,
 this Code of Conduct will help steer your interactions and keep Python a
 positive, successful, and growing community.
 
-## Our Community
+## Our Team
 
-Members of the Python community are open, considerate, and respectful.
+Members of the project team are open, considerate, and respectful.
 Behaviours that reinforce these values contribute to a positive
 environment, and include:
 
--   Being open. Members of the community are open to collaboration,
+-   Being open. Members of the team are open to collaboration,
     whether it's on PEPs, patches, problems, or otherwise.
 
--   Focusing on what is best for the community. We're respectful of the
-    processes set forth in the community, and we work within them.
+-   Focusing on what is best for the team. We're respectful of the
+    processes set forth in the team, and we work within them.
 
 -   Acknowledging time and effort. We're respectful of the volunteer
-    efforts that permeate the Python community. We're thoughtful when
+    efforts that permeate the project team. We're thoughtful when
     addressing the efforts of others, keeping in mind that often times
-    the labor was completed simply for the good of the community.
+    the labor was completed simply for the good of the team.
 
 -   Being respectful of differing viewpoints and experiences. We're
     receptive to constructive comments and criticism, as the experiences
     and skill sets of other members contribute to the whole of our
     efforts.
 
--   Showing empathy towards other community members. We're attentive in
+-   Showing empathy towards other team members. We're attentive in
     our communications, whether in person or online, and we're tactful
     when approaching differing views.
 
--   Being considerate. Members of the community are considerate of their
-    peers -- other Python users.
+-   Being considerate. Members of the team are considerate of their
+    peers.
 
 -   Being respectful. We're respectful of others, their positions, their
     skills, their commitments, and their efforts.
@@ -54,8 +54,8 @@ environment, and include:
 
 ## Our Standards
 
-Every member of our community has the right to have their identity
-respected. The Python community is dedicated to providing a positive
+Every member of our team has the right to have their identity
+respected. The project team is dedicated to providing a positive
 experience for everyone, regardless of age, gender identity and
 expression, sexual orientation, disability, physical appearance, body
 size, ethnicity, nationality, race, or religion (or lack thereof),
@@ -107,7 +107,7 @@ Examples of unacceptable behavior by participants include:
 -   Continued one-on-one communication after requests to cease
 
 -   Other conduct that is inappropriate for a professional audience
-    including people of many different backgrounds Community members
+    including people of many different backgrounds team members
     asked to stop any inappropriate behavior are expected to comply
     immediately.
 
@@ -115,9 +115,9 @@ Examples of unacceptable behavior by participants include:
 
 If a participant engages in behavior that violates this code of conduct,
 the project team may take any action they deem appropriate, including
-warning the offender or expulsion from the community and community
+warning the offender or expulsion from the team and team
 events with no refund of event tickets. Thank you for helping make this
-a welcoming, friendly community for everyone.
+a welcoming, friendly team for everyone.
 
 ## Scope
 
