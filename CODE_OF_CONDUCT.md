@@ -8,8 +8,8 @@ editor_options:
 
 The project team is made up of members from around the globe with a
 diverse set of skills, personalities, and experiences. It is through
-these differences that our community experiences great successes and
-continued growth. When you're working with members of the community,
+these differences that our team experiences great successes and
+continued growth. When you're working with members of the team,
 this Code of Conduct will help steer your interactions and keep Python a
 positive, successful, and growing community.
 
