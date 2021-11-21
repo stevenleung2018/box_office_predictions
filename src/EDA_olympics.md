@@ -2,14 +2,6 @@
 import pandas as pd
 import os.path
 
-from sklearn.model_selection import (
-    GridSearchCV,
-    RandomizedSearchCV,
-    cross_val_score,
-    cross_validate,
-    train_test_split,
-)
-
 import altair as alt
 
 # Show an image where the interactive plot is not supported such as on gradescope
@@ -259,94 +251,94 @@ olympics_raw.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>184193</th>
-      <td>92567</td>
-      <td>Heidi Pechstein (-Kunze)</td>
-      <td>F</td>
-      <td>16.0</td>
-      <td>171.0</td>
-      <td>64.0</td>
-      <td>Germany</td>
-      <td>GER</td>
-      <td>1960 Summer</td>
-      <td>1960</td>
-      <td>Summer</td>
-      <td>Roma</td>
-      <td>Swimming</td>
-      <td>Swimming Women's 100 metres Freestyle</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>208161</th>
-      <td>104491</td>
-      <td>Tomoyuki Sakai</td>
+      <th>60673</th>
+      <td>31070</td>
+      <td>Geronimo Dyogi</td>
       <td>M</td>
-      <td>21.0</td>
-      <td>170.0</td>
-      <td>62.0</td>
-      <td>Japan</td>
-      <td>JPN</td>
-      <td>2000 Summer</td>
-      <td>2000</td>
-      <td>Summer</td>
-      <td>Sydney</td>
-      <td>Football</td>
-      <td>Football Men's Football</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>243276</th>
-      <td>121836</td>
-      <td>Lucien Trepper</td>
-      <td>M</td>
-      <td>19.0</td>
-      <td>180.0</td>
-      <td>80.0</td>
-      <td>Switzerland</td>
-      <td>SUI</td>
+      <td>23.0</td>
+      <td>167.0</td>
+      <td>70.0</td>
+      <td>Philippines</td>
+      <td>PHI</td>
       <td>1972 Summer</td>
       <td>1972</td>
       <td>Summer</td>
       <td>Munich</td>
-      <td>Archery</td>
-      <td>Archery Men's Individual</td>
+      <td>Judo</td>
+      <td>Judo Men's Half-Middleweight</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>249295</th>
-      <td>124822</td>
-      <td>Leendert van Oosten</td>
-      <td>M</td>
-      <td>23.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Netherlands</td>
-      <td>NED</td>
-      <td>1908 Summer</td>
-      <td>1908</td>
-      <td>Summer</td>
-      <td>London</td>
-      <td>Wrestling</td>
-      <td>Wrestling Men's Light-Heavyweight, Greco-Roman</td>
+      <th>231273</th>
+      <td>116040</td>
+      <td>Nadia Styger (-Hrlimann)</td>
+      <td>F</td>
+      <td>31.0</td>
+      <td>171.0</td>
+      <td>70.0</td>
+      <td>Switzerland</td>
+      <td>SUI</td>
+      <td>2010 Winter</td>
+      <td>2010</td>
+      <td>Winter</td>
+      <td>Vancouver</td>
+      <td>Alpine Skiing</td>
+      <td>Alpine Skiing Women's Super G</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>18894</th>
-      <td>10013</td>
-      <td>Tibor Benedek</td>
+      <th>97802</th>
+      <td>49491</td>
+      <td>Frederick William "Fred" Holmes</td>
       <td>M</td>
-      <td>36.0</td>
-      <td>190.0</td>
-      <td>96.0</td>
-      <td>Hungary</td>
-      <td>HUN</td>
-      <td>2008 Summer</td>
-      <td>2008</td>
+      <td>33.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Great Britain</td>
+      <td>GBR</td>
+      <td>1920 Summer</td>
+      <td>1920</td>
       <td>Summer</td>
-      <td>Beijing</td>
-      <td>Water Polo</td>
-      <td>Water Polo Men's Water Polo</td>
+      <td>Antwerpen</td>
+      <td>Tug-Of-War</td>
+      <td>Tug-Of-War Men's Tug-Of-War</td>
       <td>Gold</td>
+    </tr>
+    <tr>
+      <th>125284</th>
+      <td>63220</td>
+      <td>Oksana Kotova</td>
+      <td>F</td>
+      <td>19.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Kazakhstan</td>
+      <td>KAZ</td>
+      <td>1994 Winter</td>
+      <td>1994</td>
+      <td>Winter</td>
+      <td>Lillehammer</td>
+      <td>Cross Country Skiing</td>
+      <td>Cross Country Skiing Women's 5/10 kilometres P...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70077</th>
+      <td>35697</td>
+      <td>Leon Victor Flack</td>
+      <td>M</td>
+      <td>21.0</td>
+      <td>188.0</td>
+      <td>76.0</td>
+      <td>Great Britain</td>
+      <td>GBR</td>
+      <td>2002 Winter</td>
+      <td>2002</td>
+      <td>Winter</td>
+      <td>Salt Lake City</td>
+      <td>Short Track Speed Skating</td>
+      <td>Short Track Speed Skating Men's 1,000 metres</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -372,6 +364,32 @@ Since we focus on `age`, we are going to remove the observations where `age` is 
 ```python
 olympics_df = olympics_raw[olympics_raw['age'].notna()]
 ```
+
+Let see what the age distribution looks like for all athletes.
+
+
+```python
+age_hist = alt.Chart(olympics_df).mark_bar().encode(
+    alt.X('age:Q', scale=alt.Scale(zero=False)),
+    alt.Y('count()'),
+    tooltip=['age', 'count()']
+).properties(
+    width=300,
+    height=300
+)
+age_hist
+```
+
+
+
+
+    
+![png](output_8_0.png)
+    
+
+
+
+As can be seen above, the age peaks at 23 years old and the distribution is bell-shaped and right-skewed.
 
 Let's explore how age correlates with other numeric features
 
@@ -399,7 +417,7 @@ numeric_cols_plot
 
 
     
-![png](output_8_0.png)
+![png](output_10_0.png)
     
 
 
@@ -443,7 +461,7 @@ numeric_cols_plot
 
 
     
-![png](output_11_0.png)
+![png](output_13_0.png)
     
 
 
@@ -476,7 +494,7 @@ age_medals_hist
 
 
     
-![png](output_13_0.png)
+![png](output_15_0.png)
     
 
 
@@ -517,7 +535,7 @@ cat_plots
 
 
     
-![png](output_15_0.png)
+![png](output_17_0.png)
     
 
 
