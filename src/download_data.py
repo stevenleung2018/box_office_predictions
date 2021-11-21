@@ -1,5 +1,5 @@
 # author: Brandon Lam
-# date: 2021-11-18
+# date: 2021-11-20
 
 """Downloads csv data from a given URL to a local filepath.
 
@@ -17,10 +17,6 @@ import pandas as pd
 opt = docopt(__doc__)
 
 def main(url, saving_path): 
-  try:
-    data = pd.read_csv(url)
-  except:
-    print("Failed to download the file")
   
   data = pd.read_csv(url)
 

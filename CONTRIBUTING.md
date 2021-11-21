@@ -4,10 +4,9 @@ editor_options:
     wrap: 72
 ---
 
-# Contributing to the Box Office Predictions project
+# Contributing to the project
 
-This outlines how to propose a change to the Box Office Predictions
-project.
+This outlines how to propose a change to the project.
 
 ### Fixing typos
 
