@@ -1,9 +1,6 @@
 ---
 title: "Hypothesis test for Olympics Data Set"
-output:
-  pdf_document:
-    toc: yes
-    toc_depth: '4'
+output: "pdf_document"
 ---
 
 ```{r}
@@ -38,7 +35,7 @@ olympics_clean <- olympics |>
            medal = as.double(medal),
            over_under = case_when(age >= age_threshold ~ "over", TRUE ~ "under"))
 olympics_clean <- olympics_clean |> select(over_under, medal)
-olympics_clean
+head(olympics_clean)
 ```
 
 Calculating the observed proportion:
@@ -75,7 +72,7 @@ null_distribution_olympics <- olympics_clean |>
   hypothesize(null = "independence") |>
   generate(reps = 1000, type = "permute") |>
   calculate(stat = "diff in props", order = c("under", "over"))
-null_distribution_olympics
+head(null_distribution_olympics)
 ```
 
 Let's visualize the null distribution now:
