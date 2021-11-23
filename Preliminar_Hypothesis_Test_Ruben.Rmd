@@ -1,0 +1,116 @@
+---
+title: "Hypothesis test for Olympics Data Set"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '4'
+---
+
+```{r}
+library(broom)
+library(infer)
+library(knitr)
+library(tidyverse)
+library(cowplot)
+library(digest)
+library(palmerpenguins)
+library(testthat)
+library(tidyverse)
+library(infer)
+options(repr.matrix.max.rows = 6)
+```
+
+Importing the data:
+```{r}
+olympics <- read.csv("olympics.csv")
+```
+
+Removing NA values from the 'age' column, and wrangling the data for the medal column.
+```{r}
+age_threshold <- 25
+olympics_clean <- olympics |>
+    filter(is.na(age) == FALSE,
+           #year >= 1984
+           ) |>
+    select(name, age, event, medal) |>
+    mutate(medal = case_when(is.na(medal) ~ "0", TRUE ~ medal),
+           medal = case_when(medal != "0" ~ "1", TRUE ~ medal),
+           medal = as.double(medal),
+           over_under = case_when(age >= age_threshold ~ "over", TRUE ~ "under"))
+olympics_clean <- olympics_clean |> select(over_under, medal)
+olympics_clean
+```
+
+Calculating the observed proportion:
+```{r}
+olympics_prop <- olympics_clean |>
+    group_by(over_under) |>
+    summarise(sum = sum(medal),
+              count = n(),
+              prop = sum(medal) / n())
+olympics_prop
+```
+
+First, we'll define H0 and HA:
+$H_0:$ the proportion of athletes under 25 that win a medal is equal to the proportion of athletes 25 and older that win a medal.
+$H_A:$ the proportion of athletes under 25 that win a medal is greater to the proportion of athletes 25 and older that win a medal.
+
+Let's compute the observed test statistic:
+
+```{r}
+delta_star <- diff(olympics_prop$prop)
+round(delta_star, 5)
+```
+
+Now let's use simulation to create the null distribution sample:
+
+```{r}
+olympics_clean <- olympics_clean |>
+           mutate(medal = as.factor(medal),
+           over_under = as.factor(over_under))
+
+set.seed(1234) # For reproducibility.
+null_distribution_olympics <- olympics_clean |>
+  specify(formula = medal ~ over_under, success = "1") |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute") |>
+  calculate(stat = "diff in props", order = c("under", "over"))
+null_distribution_olympics
+```
+
+Let's visualize the null distribution now:
+
+```{r}
+options(repr.plot.width = 10, repr.plot.height = 10) 
+h0_dist <- null_distribution_olympics %>% 
+    visualize() +
+    theme(text = element_text(size=20)) +
+  theme(
+    text = element_text(size = 20),
+    plot.title = element_text(face = "bold"),
+    axis.title = element_text(face = "bold"),
+    legend.title = element_text(face = "bold"),
+  )
+h0_dist 
+```
+
+Check where the observed statistic falls:
+
+```{r}
+alpha_threshold <- quantile(null_distribution_olympics$stat, 0.95)
+
+h0_dist <- h0_dist + geom_vline(
+  xintercept = alpha_threshold,
+  color = "blue", lty = 5, size = 2) +
+  geom_vline(xintercept = delta_star, color = "red", size = 1.5)
+
+h0_dist
+```
+
+Let's calculate our p-value:
+
+```{r}
+null_distribution_olympics %>%
+  get_pvalue(obs_stat = delta_star, direction = "greater")
+```
+
