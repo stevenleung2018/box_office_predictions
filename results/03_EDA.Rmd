@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readr)
 library(tidyverse)
 library(here)
+library(knitr)
 library(pracma)
 ```
 
@@ -61,10 +62,10 @@ And I am including it for your convenience:
 
 Let's load the data and find out more.
 
-```{r summary, echo=FALSE, message=FALSE}
+```{r summary, echo=FALSE, message=FALSE, out.width='25%'}
 olympics_df <- read_csv("../data/olympics_cleaned.csv")
-knitr::kable(summary(olympics_df),
-             caption="Table 1: Summary information of data")
+kable(summary(olympics_df),
+      caption="Table 1: Summary information of data")
 ```
 
 The data, after removing rows with `age` missing because we focus on `age` in our analysis, has `r nrow(olympics_df)` rows and `r ncol(olympics_df)` columns.  Here are more information as we examine the dataframe.
@@ -86,7 +87,11 @@ knitr::kable(sample_n(olympics_df, 5),
 
 Let's see what the age distribution looks like for all athletes:
 
-![Figure 1: Age distribution](03_Figure1_age_hist.png)
+```{r figure-1, out.width = "100%", fig.cap = 'Figure 1: Age distribution', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure1_age_hist.png")
+
+#![Figure 1: Age distribution](03_Figure1_age_hist.png)
+```
 
 ```{r mode_age, echo=FALSE, message=FALSE}
 mode_age <- Mode(olympics_df$age)
@@ -98,11 +103,20 @@ As can be seen above, the age peaks at `r mode_age` years old and the distributi
 
 Let's explore how age correlates with other numeric features.
 
-![Figure 2: Age vs Numeric features](03_Figure2_numeric_cols_plot.png)
+
+```{r figure-2, out.width = "100%", fig.cap = 'Figure 2: Age vs Numeric features', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure2_numeric_cols_plot.png")
+
+#![Figure 2: Age vs Numeric features](03_Figure2_numeric_cols_plot.png)
+```
 
 It seems difficult to visualize when the class imbalance is with `medal` when not having a medal is the majority.  Now we try again with the data only with medals and look at the data again.
 
-![Figure 3: Age vs Numeric features (only with medals)](03_Figure3_numeric_cols_plot.png)
+```{r figure-3, out.width = "100%", fig.cap = 'Figure 3: Age vs Numeric features (only with medals)', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure3_numeric_cols_plot.png")
+
+#![Figure 3: Age vs Numeric features (only with medals)](03_Figure3_numeric_cols_plot.png)
+```
 
 Some high-level insights:
 
@@ -111,7 +125,11 @@ Some high-level insights:
 
 Perhaps we should simply just look at the relationship between age and medals...
 
-![Figure 4: Age vs Medals](03_Figure4_age_medals_hist.png)
+```{r figure-4, out.width = "100%", fig.cap = 'Figure 4: Age vs Medals', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure4_age_medals_hist.png")
+
+#![Figure 4: Age vs Medals](03_Figure4_age_medals_hist.png)
+```
 
 All the modes for `Gold`, `Silver` and `Bronze` appear to be the same as the overall age distribution as seen in Figure 1 above.
 
@@ -119,7 +137,11 @@ All the modes for `Gold`, `Silver` and `Bronze` appear to be the same as the ove
 
 Now let's also explore the categorical features.
 
-![Figure 5: Age vs Categorical features](03_Figure5_cat_plots.png)
+```{r figure-5, out.width = "100%", fig.cap = 'Figure 5: Age vs Categorical features', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure5_cat_plots.png")
+
+#![Figure 5: Age vs Categorical features](03_Figure5_cat_plots.png)
+```
 
 ### Comments by categorical features:
 
