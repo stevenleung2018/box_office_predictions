@@ -1,0 +1,100 @@
+---
+title: Final Report - Under 25 vs Over 25 - Olympic Athletes
+
+# to produce blinded version set to 1
+blinded: 0
+
+authors: 
+- name: Steven Leung
+  affiliation: MDS
+- name: Brandon Lam
+  affiliation: MDS
+- name: Sam Quist
+  affiliation: MDS
+- name: Ruben De la Garza
+  affiliation: MDS
+ 
+keywords:
+- data science curriculum, exploratory data analysis, data visualization, modeling, reproducibility, R, hypothesis test
+
+bibliography: bibliography.bib
+output:
+  html_document:
+    toc: true
+    toc_depth: '4'
+---
+
+```{r blinding, echo=FALSE}
+blind <- FALSE
+```
+
+
+```{r load-packages, include=FALSE}
+library(tidyverse)
+library(infer)
+library(broom)
+library(knitr)
+library(scales)
+library(kableExtra)
+```
+
+```{r code-font-size, echo=FALSE}
+def.chunk.hook <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+ x <- def.chunk.hook(x, options)
+ ifelse(options$size != "normalsize", paste0("\\", options$size,"\n", x, "\n \\normalsize"), x)
+})
+options(scipen = 0, digits = 3)
+```
+\n
+# Introduction
+
+It is known that olympic athletes require to train year after year for their shot at winning a medal for their country. In addition to physical strenght, the right mental state is very important for success in these events. It is a common conception to think that the younger the athlete, the stronger. But is that enough to win a medal? Does experience play a more important role? For this project we will attempt to make a hypothesis test to answer the question - is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?
+
+To answer this question we are going to use a data set obtained from tidytuesday, which contains information of the athletes that competed on the events for the summer and winter olympics from 1896 to 2016. The dataset contains the following information: \n
+- id: an id for each athlete, year, event combination.\n
+- name: name of the athlete.\n
+- sex: sex of the athlete.\n
+- age: age of the athlete.\n
+- height: height of the athlete.\n
+- weight: weight of the athlete.\n
+- team: country of origin / team of the athlete.\n
+- noc: country code for the athletes country of origin.\n
+- games: year and season for the event.\n
+- year: year for the event.\n
+- season: summer or winter.\n
+- city: city where the olympic games took place.\n
+- sport: sport related to the event.\n
+- event: specific event for which the athlete competed.\n
+- medal: specifies what medal was obtained by the athlete, or NA if the athlete did not get a medal.\n
+
+**Limitations and assumptions**:
+
+# Methods
+
+R programming language [@R] and the following R packages were used to perform the analysis: \n
+- tidyverse [@tidyverse] \n
+- knitr [@knitr] \n
+- infer [@infer] \n
+- broom [@broom] \n
+- docopt [@docopt]
+
+Also, python language [@python] and the following packages were used for the EDA: \n
+- os [@os] \n
+- altair [@vanderplas2018altair] \n
+- pandas [@pandas] \n
+
+# EDA
+
+
+
+# Hypothesis Test
+
+```{r intro, child="Preliminar_Hypothesis_Test_Ruben.Rmd"}
+```
+
+# Acknowledgements {-}
+
+We thank the editors, the associate editors, and anonymous reviewers for their helpful comments and suggestions.
+
+# References
