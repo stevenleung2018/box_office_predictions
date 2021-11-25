@@ -1,0 +1,154 @@
+---
+title: "Olympic Medal Hypothesis Testing - EDA"
+author: "Steven Leung"
+date: "24/11/2021"
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(here)
+library(knitr)
+library(pracma)
+```
+
+# Exploratory Data Analysis
+
+\label{sec:EDA}
+
+Here is the URL of our data source:
+
+<https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-27>
+
+Direct download links to individual CSV files:
+
+The only file we need for our purpose:
+
+<https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/olympics.csv>
+
+Other files:
+
+<https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/athlete_events.csv> <https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/noc_regions.csv> <https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/regions.csv>
+
+Based on the source page, we understand that we really need the `olympics.csv` file which is the cleaned version of the file `athlete.csv`. The other 2 files only contains redundant information as far as our analytic objective is concerned. So we are going to do EDA on the `olympics.csv` file here.
+
+The data dictionary is available here:
+
+<https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-27#olympicscsv>
+
+And I am including it for your convenience:
+
+| variable | class     | description                        |
+|:---------|:----------|:-----------------------------------|
+| id       | double    | Athlete ID                         |
+| name     | character | Athlete Name                       |
+| sex      | character | Athlete Sex                        |
+| age      | double    | Athlete Age                        |
+| height   | double    | Athlete Height in cm               |
+| weight   | double    | Athlete weight in kg               |
+| team     | character | Country/Team competing for         |
+| noc      | character | noc region                         |
+| games    | character | Olympic games name                 |
+| year     | double    | Year of olympics                   |
+| season   | character | Season either winter or summer     |
+| city     | character | City of Olympic host               |
+| sport    | character | Sport                              |
+| event    | character | Specific event                     |
+| medal    | character | Medal (Gold, Silver, Bronze or NA) |
+
+Let's load the data and find out more.
+
+```{r summary, echo=FALSE, message=FALSE, out.width='25%'}
+olympics_df <- read_csv("../data/olympics_cleaned.csv")
+kable(summary(olympics_df),
+      caption="Table 1: Summary information of data")
+```
+
+The data, after removing rows with `age` missing because we focus on `age` in our analysis, has `r nrow(olympics_df)` rows and `r ncol(olympics_df)` columns.  Here are more information as we examine the dataframe.
+
+Let's also sample a few rows from the data:
+
+```{r sample_rows, echo=FALSE, message=FALSE}
+knitr::kable(sample_n(olympics_df, 5),
+             caption = "Table 2: Sample rows from data")
+```
+
+## Points to note:
+
+1. Each observation is an athlete-event pair.  In other words, an athlete could participate in more than 1 event in the same Olympic game, and the same athlete can participate in multiple Olympic games; 
+2. The columns do not have missing values after removing the rows with age missing.  Even though `medal` appears to have a lot of missing values ('NA'), they are really not missing because the meaning of not having `Gold`, `Silver` or `Bronze` would only mean that the athlete concerned did not win any medal.  This is normal because there is a very small number of medals per event.  For the purpose of this EDA, we may just treat 'NA' as a category together with `Gold`, `Silver` and `Bronze`.
+3. `id` is the unique identifier for an athlete and `noc` is the unique identifier for an NOC which most often represents a country except `IOA` (standing for "Individual Olympic Athlete") which is the representation for athletes without an NOC and similary `ROT` (standing for "Refugee Olympic Team").
+
+## Age Distribution
+
+Let's see what the age distribution looks like for all athletes:
+
+```{r figure-1, out.width = "100%", fig.cap = 'Figure 1: Age distribution', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure1_age_hist.png")
+
+#![Figure 1: Age distribution](03_Figure1_age_hist.png)
+```
+
+```{r mode_age, echo=FALSE, message=FALSE}
+mode_age <- Mode(olympics_df$age)
+```
+
+As can be seen above, the age peaks at `r mode_age` years old and the distribution is bell-shaped and right-skewed.
+
+## Age vs Numeric features
+
+Let's explore how age correlates with other numeric features.
+
+
+```{r figure-2, out.width = "100%", fig.cap = 'Figure 2: Age vs Numeric features', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure2_numeric_cols_plot.png")
+
+#![Figure 2: Age vs Numeric features](03_Figure2_numeric_cols_plot.png)
+```
+
+It seems difficult to visualize when the class imbalance is with `medal` when not having a medal is the majority.  Now we try again with the data only with medals and look at the data again.
+
+```{r figure-3, out.width = "100%", fig.cap = 'Figure 3: Age vs Numeric features (only with medals)', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure3_numeric_cols_plot.png")
+
+#![Figure 3: Age vs Numeric features (only with medals)](03_Figure3_numeric_cols_plot.png)
+```
+
+Some high-level insights:
+
+1. There is some apparently correlation of between height and age and between weight and age for those who got medals; and
+2. The maximum age of athletes getting medals seemed to shrink between 1960s and 1980s, and it seemed to increase again till now.
+
+Perhaps we should simply just look at the relationship between age and medals...
+
+```{r figure-4, out.width = "100%", fig.cap = 'Figure 4: Age vs Medals', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure4_age_medals_hist.png")
+
+#![Figure 4: Age vs Medals](03_Figure4_age_medals_hist.png)
+```
+
+All the modes for `Gold`, `Silver` and `Bronze` appear to be the same as the overall age distribution as seen in Figure 1 above.
+
+## Age vs Categorical Features
+
+Now let's also explore the categorical features.
+
+```{r figure-5, out.width = "100%", fig.cap = 'Figure 5: Age vs Categorical features', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure5_cat_plots.png")
+
+#![Figure 5: Age vs Categorical features](03_Figure5_cat_plots.png)
+```
+
+### Comments by categorical features:
+
+1. `Sex` - The mail medalists seem to have a higher mean age than female counterparts but not by a lot.  The age distribution of male medalists is also more right-skewed compared with female medalists;
+2. `season` - The age spread is larger for `summer` over `winter` and the distribution of `summer` is more right-skewed than `winter`.
+
+We know that the labels are not very readable, but for the other categorical features, namely `noc`, `games`, `city`, `sport` and `event`, and for the purpose of this EDA, it is just to show that:
+
+1. `age` varies greatly across those categorical features; and
+2. The 3 medals appears to distribute very similarly with all those features.
