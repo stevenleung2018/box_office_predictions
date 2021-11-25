@@ -1,0 +1,28 @@
+---
+title: "Olympic Medal Hypothesis Testing - EDA (preliminary draft)"
+author: "Steven Leung"
+date: "24/11/2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(here)
+```
+
+# Exploratory Data Analysis
+\label{sec:EDA}
+
+```{r df-shape, echo=FALSE, message=FALSE}
+df_shape <- read_csv("03_02_df_shape.csv")$'0'
+```
+
+The data, after removing rows with age missing, has `r sprintf("%.0f", df_shape[1])` rows and `r df_shape[2]` columns.
+
+Here is a histogram of age:
+
+![Figure 1: Age distribution](03_03_age_hist.png)
