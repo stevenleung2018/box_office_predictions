@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# THIS IS AN INCOMPLETE SCRIPT FOR TESTING ONLY.
-
 # author: Steven Leung
 # date: 2021-11-24
 # project: Olympic Medal Hypothesis Testing
@@ -35,20 +33,9 @@ def main(reading_path, saving_path):
     except:
         print("Please ensure that the following file is available:\n", reading_path)
 
-    try:
-        text_file = open(os.path.join(saving_path, "03_01_df-info.txt"), "w")
-    except:
-        print("Please check if the saving path is correct and is writable:\n", saving_path)
-
-    buffer = io.StringIO()
-    olympics_df.info(buf=buffer)
-    text_file.write(buffer.getvalue())
-    text_file.close()
-
-    pd.DataFrame(olympics_df.shape).to_csv(os.path.join(saving_path, "03_02_df_shape.csv"))
-
     # Let see what the age distribution looks like for all athletes.
 
+    # Figure 1
     age_hist = alt.Chart(olympics_df).mark_bar().encode(
         alt.X('age:Q', scale=alt.Scale(zero=False)),
         alt.Y('count()'),
@@ -57,7 +44,102 @@ def main(reading_path, saving_path):
         width=300,
         height=300
     )
-    age_hist.save(os.path.join(saving_path, "03_03_age_hist.png"))
+    try:
+        age_hist.save(os.path.join(saving_path, "03_Figure1_age_hist.png"))
+    except:
+        print("Please check if the saving path is correct and is writable:\n",
+              saving_path)
+    
+    numeric_cols_names = ['height', 
+                      'weight',
+                      'year']
 
+    # Figure 2
+    numeric_cols_plot = alt.Chart(olympics_df).mark_point(
+        opacity=0.3, 
+        size=10
+    ).encode(
+         alt.X('age', type='quantitative', scale=alt.Scale(zero=False)),
+         alt.Y(alt.repeat('column'), 
+               type='quantitative',      
+               scale=alt.Scale(zero=False)),
+         color='medal:N'
+    ).properties(
+        width=150,
+        height=150
+    ).repeat(
+        column=numeric_cols_names
+    )
+
+    numeric_cols_plot.save(os.path.join(saving_path, 
+                                        "03_Figure2_numeric_cols_plot.png"))
+    
+    # Figure 3
+    olympics_medals_df = olympics_df[olympics_df['medal'].notna()]
+    numeric_cols_names = ['height', 
+                      'weight',
+                      'year']
+
+    numeric_cols_plot = alt.Chart(olympics_medals_df).mark_point(
+        opacity=0.3, 
+        size=10
+    ).encode(
+         alt.X('age', type='quantitative', scale=alt.Scale(zero=False)),
+         alt.Y(alt.repeat('column'), 
+               type='quantitative', 
+               scale=alt.Scale(zero=False)),
+         color='medal:N'
+    ).properties(
+        width=150,
+        height=150
+    ).repeat(
+        column=numeric_cols_names
+    )
+
+    numeric_cols_plot.save(os.path.join(saving_path, 
+                                        "03_Figure3_numeric_cols_plot.png"))
+
+    age_medals_hist = alt.Chart(olympics_medals_df).mark_bar().encode(
+        alt.X('age:Q', scale=alt.Scale(zero=False)),
+        alt.Y('count()'),
+        color=('medal'),
+        tooltip=['age', 'medal', 'count()']
+    ).properties(
+        width=180,
+        height=180
+    ).facet(
+        facet='medal:N',
+        columns=3
+    )
+    age_medals_hist.save(os.path.join(saving_path, 
+                                      "03_Figure4_age_medals_hist.png"))
+    
+    # Figure 5
+    cat_cols = ['sex',
+            'season',
+            'noc',
+            'games',
+            'city',
+            'sport',
+            'event']
+
+    cat_plots = alt.Chart(olympics_medals_df).mark_boxplot().encode(
+        x=alt.X('age', type='quantitative'),
+        y=alt.Y(alt.repeat('row'), type='nominal'),
+        color='medal:N',
+        tooltip=['age']
+    ).properties(
+        height=300,
+        width=150
+    ).facet(
+        facet='medal:N',
+        columns=3
+    ).repeat(
+        row=cat_cols
+    )
+
+    cat_plots.save(os.path.join(saving_path, 
+                                "03_Figure5_cat_plots.png"))
+    
 if __name__ == "__main__":
   main(opt["--reading_path"], opt["--saving_path"])
