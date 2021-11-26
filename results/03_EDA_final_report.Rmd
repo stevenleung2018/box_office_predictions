@@ -68,6 +68,8 @@ kable(summary(olympics_df),
       caption="Table 1: Summary information of data")
 ```
 
+
+
 The data, after removing rows with `age` missing because we focus on `age` in our analysis, has `r nrow(olympics_df)` rows and `r ncol(olympics_df)` columns.  Here are more information as we examine the dataframe.
 
 Let's also sample a few rows from the data:
@@ -79,15 +81,17 @@ knitr::kable(sample_n(olympics_df, 5),
 
 ## Points to note:
 
-1. Each observation is an athlete-event pair.  In other words, an athlete could participate in more than 1 event in the same Olympic game, and the same athlete can participate in multiple Olympic games; 
+1. Each observation is an athlete-event-games key.  In other words, an athlete could participate in more than 1 event in the same Olympic game, and the same athlete can participate in multiple Olympic games;
+
 2. The columns do not have missing values after removing the rows with age missing.  Even though `medal` appears to have a lot of missing values ('NA'), they are really not missing because the meaning of not having `Gold`, `Silver` or `Bronze` would only mean that the athlete concerned did not win any medal.  This is normal because there is a very small number of medals per event.  For the purpose of this EDA, we may just treat 'NA' as a category together with `Gold`, `Silver` and `Bronze`.
+
 3. `id` is the unique identifier for an athlete and `noc` is the unique identifier for an NOC which most often represents a country except `IOA` (standing for "Individual Olympic Athlete") which is the representation for athletes without an NOC and similary `ROT` (standing for "Refugee Olympic Team").
 
 ## Age Distribution
 
 Let's see what the age distribution looks like for all athletes:
 
-```{r figure-1, out.width = "100%", fig.cap = 'Figure 1: Age distribution', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+```{r figure-1, out.width = "50%", fig.cap = 'Figure 1: Age distribution', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
 include_graphics("03_Figure1_age_hist.png")
 
 #![Figure 1: Age distribution](03_Figure1_age_hist.png)
@@ -97,7 +101,7 @@ include_graphics("03_Figure1_age_hist.png")
 mode_age <- Mode(olympics_df$age)
 ```
 
-As can be seen above, the age peaks at `r mode_age` years old and the distribution is bell-shaped and right-skewed.
+As can be seen above, the age peaks at `r mode_age` years old and the distribution is bell-shaped and right-skewed, which means that there are a few older athletes that compete in the olympics.
 
 ## Age vs Numeric features
 
@@ -110,7 +114,7 @@ include_graphics("03_Figure2_numeric_cols_plot.png")
 #![Figure 2: Age vs Numeric features](03_Figure2_numeric_cols_plot.png)
 ```
 
-It seems difficult to visualize when the class imbalance is with `medal` when not having a medal is the majority.  Now we try again with the data only with medals and look at the data again.
+It seems difficult to visualize when the class imbalance is with `medal`, when not having a medal is the majority.  Now we try again with the data only with medals and look at the data again.
 
 ```{r figure-3, out.width = "100%", fig.cap = 'Figure 3: Age vs Numeric features (only with medals)', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
 include_graphics("03_Figure3_numeric_cols_plot.png")
@@ -120,7 +124,8 @@ include_graphics("03_Figure3_numeric_cols_plot.png")
 
 Some high-level insights:
 
-1. There is some apparently correlation of between height and age and between weight and age for those who got medals; and
+1. There is some apparent correlation of between height and age and between weight and age for those who got medals; and
+
 2. The maximum age of athletes getting medals seemed to shrink between 1960s and 1980s, and it seemed to increase again till now.
 
 Perhaps we should simply just look at the relationship between age and medals...
@@ -132,4 +137,6 @@ include_graphics("03_Figure4_age_medals_hist.png")
 ```
 
 All the modes for `Gold`, `Silver` and `Bronze` appear to be the same as the overall age distribution as seen in Figure 1 above.
+
+After this initial analysis, we can see that the age threshold of 25 years old lies in a very good spot, a little higher than the mean. This makes it harder to intuitively predict what the result of the test will be. Let's follow this with the analysis!
 
