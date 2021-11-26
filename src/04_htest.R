@@ -40,9 +40,10 @@ main <- function(data, saving_path) {
     summarize(
         medal= sum(medal),
         n = n(),
-        prop = sum(medal) / n()
+        prop = round(sum(medal) / n(), 4)
     ) |>
     arrange(desc(age))
+    saveRDS(olympics_summary, file = paste0(saving_path, "/04_summary.rds"))
     
     #Conduct hypothesis testing
     delta_star <- -diff(olympics_summary$prop)
@@ -80,10 +81,6 @@ main <- function(data, saving_path) {
         get_pvalue(obs_stat = delta_star, direction = "greater")
     saveRDS(p_value, file = paste0(saving_path, "/04_p_value.rds"))
     
-    # Conduct prop test
-    test <- tidy(prop.test(olympics_summary$medal, olympics_summary$n,
-                      correct = FALSE, alternative = c("greater")))
-    saveRDS(test, file = paste0(saving_path, "/04_prop_test.rds"))
 }
 
 main(opt[["--data"]], opt[["--saving_path"]])
