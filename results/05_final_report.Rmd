@@ -81,10 +81,11 @@ Also, python language [@python] and the following packages were used for the EDA
 - pandas [@pandas]
 
 ```{r eda, child="../results/03_EDA_final_report.Rmd"}
-
 ```
 
 # Results & Discussion
 
+```{r eda, child="../results/04_Htest.Rmd"}
+```
 
 # References
