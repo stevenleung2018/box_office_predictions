@@ -5,7 +5,7 @@ date: "11/25/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setuphtest, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(broom)
@@ -43,7 +43,7 @@ The code used to perform the analysis and create this report can be found here: 
 
 ## Results & Discussion
 
-```{r summary, echo=FALSE, fig.cap="Figure 1. Hypothesis testing result", out.width = '80%'}
+```{r summaryhtest, echo=FALSE, fig.cap="Figure 1. Hypothesis testing result", out.width = '80%'}
 kable(summary, caption = "Table 1. Data summary.") |>
   kable_styling(full_width = FALSE, position = "left")
 ```
