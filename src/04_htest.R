@@ -45,7 +45,7 @@ main <- function(data, saving_path) {
     arrange(desc(age))
     
     #Conduct hypothesis testing
-    delta_star <- diff(olympics_summary$prop)
+    delta_star <- -diff(olympics_summary$prop)
     olympics_dist <- olympics_df |>
         mutate(medal = as.factor(medal),
         age = as.factor(age))
@@ -65,12 +65,10 @@ main <- function(data, saving_path) {
             xintercept = alpha_threshold,
             color = "blue", lty = 5, size = 2) +
         geom_vline(xintercept = delta_star, color = "red", size = 1.5)+
-        theme(text = element_text(size=20)) +
+        theme(text = element_text(size=12)) +
         theme(
-            text = element_text(size = 20),
-            plot.title = element_text(face = "bold"),
-            axis.title = element_text(face = "bold"),
-            legend.title = element_text(face = "bold")
+            text = element_text(size = 12),
+            plot.title = element_text(face = "bold")
         )
     try({
     dir.create(saving_path)
@@ -78,15 +76,14 @@ main <- function(data, saving_path) {
     ggsave(paste0(saving_path, "/04_h0_dist.png"), h0_dist, width = 5, height = 3)
     
     # Calculate p-value
-    null_distribution_olympics |>
-        get_pvalue(obs_stat = delta_star, direction = "less")
+    p_value <- null_distribution_olympics |>
+        get_pvalue(obs_stat = delta_star, direction = "greater")
     saveRDS(p_value, file = paste0(saving_path, "/04_p_value.rds"))
     
     # Conduct prop test
-    test <- prop.test(olympics_summary$medal, olympics_summary$n,
-                      correct = FALSE, alternative = c("greater"))
-    result <- tidy(test)
-    saveRDS(prop_test, file = paste0(saving_path, "/04_prop_test.rds"))
+    test <- tidy(prop.test(olympics_summary$medal, olympics_summary$n,
+                      correct = FALSE, alternative = c("greater")))
+    saveRDS(test, file = paste0(saving_path, "/04_prop_test.rds"))
 }
 
 main(opt[["--data"]], opt[["--saving_path"]])
