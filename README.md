@@ -1,4 +1,4 @@
-# Box Office Predictions
+# Olympic Medal Hypothesis Testing
 
 -   authors: Steven Leung, Sam Quist, Brandon Lam, Ruben De la Garza Macias
 
