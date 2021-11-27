@@ -21,6 +21,10 @@ We will use the simulation/permutation technique, and our test statistic will be
 
 The EDA performed and reports for the data set can be found in the src folder in this repo.
 
+## Report
+
+The rendered final report is located [here](https://github.com/UBC-MDS/olympic_medal_htest/tree/main/doc/05_final_report.html)
+
 ## Usage
 
 The analysis can be reproduced by following these steps:
@@ -73,13 +77,14 @@ The Python environment required to run every python script can be found [here](h
         - altair=4.1.0
         - altair_viewer=0.4.0
         - altair_saver=0.5.0
+        - pandoc=2.16.2
         
     - R 4.1.2 and libraries:
         - readr=2.1.0
         - tidyverse=1.3.1
         - here=1.0.1
         - knitr=1.36
-        - pragma=2.3.3
+        - pracma=2.3.3
         - broom=0.7.9
         - infer=1.0.0
         - docopt=0.7.1
@@ -87,5 +92,28 @@ The Python environment required to run every python script can be found [here](h
 
 ## License
 
+The Olympic Medal H-test project is available under the MIT license. See [LICENSE](https://github.com/UBC-MDS/olympic_medal_htest/blob/main/LICENSE) for more information.
 
 # References
+
+Bray, Andrew, Chester Ismay, Evgeni Chasnovski, Simon Couch, Ben Baumer, and Mine Cetinkaya-Rundel. 2021. Infer: Tidy Statistical Inference. https://CRAN.R-project.org/package=infer.
+
+de Jonge, Edwin. 2020. Docopt: Command-Line Interface Specification Language. https://CRAN.R-project.org/package=docopt.
+
+McKinney, Wes. 2010. “Data Structures for Statistical Computing in Python.” In Proceedings of the 9th Python in Science Conference, edited by Stéfan van der Walt and Jarrod Millman, 51–56.
+
+Python Core Team. 2019a. Python: A dynamic, open source programming language. Python Software Foundation. https://www.python.org/.
+
+———. 2019b. Python: A dynamic, open source programming language. Python Software Foundation. https://www.python.org/.
+
+R Core Team. 2021. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.R-project.org/.
+
+Robinson, David, Alex Hayes, and Simon Couch. 2021. Broom: Convert Statistical Objects into Tidy Tibbles. https://CRAN.R-project.org/package=broom.
+
+VanderPlas, Jacob, Brian E Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical Visualizations for Python.” Journal of Open Source Software 3 (32): 1057.
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+
+Xie, Yihui. 2021. Knitr: A General-Purpose Package for Dynamic Report Generation in r. https://yihui.org/knitr/.
+
+Zhu, Hao. 2021. kableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax. https://CRAN.R-project.org/package=kableExtra.
