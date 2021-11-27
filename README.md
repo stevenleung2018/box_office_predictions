@@ -117,3 +117,7 @@ Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino 
 Xie, Yihui. 2021. Knitr: A General-Purpose Package for Dynamic Report Generation in r. https://yihui.org/knitr/.
 
 Zhu, Hao. 2021. kableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax. https://CRAN.R-project.org/package=kableExtra.
+
+Singh, Dr Preet Deep. 2021. “Olympic Medals: Matter of Nerves.” Available at SSRN 3901321. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3901321
+
+Elmenshawy, Ahmed R, Daniel R Machin, and Hirofumi Tanaka. 2015. “A Rise in Peak Performance Age in Female Athletes.” Age 37 (3): 1–8. https://link.springer.com/article/10.1007/s11357-015-9795-8
