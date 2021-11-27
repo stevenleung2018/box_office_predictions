@@ -43,21 +43,21 @@ The code used to perform the analysis and create this report can be found here: 
 
 ## Results & Discussion
 
-```{r summaryhtest, echo=FALSE, fig.cap="Figure 1. Hypothesis testing result", out.width = '80%'}
-kable(summary, caption = "Table 1. Data summary.") |>
+```{r summaryhtest, echo=FALSE}
+kable(summary, caption = "Table 3. Data summary") |>
   kable_styling(full_width = FALSE, position = "left")
 ```
 
 There are 131,134 athletes under age of 25 and 13.68% of them got a medal in the event, while there are 130,508 athletes equal to or above the age of 25 and 16.18% of them got a medal in the event.
 
-```{r testing-result, echo=FALSE, fig.cap="Figure 1. Hypothesis testing result", out.width = '80%'}
+```{r testing-result, echo=FALSE, fig.cap="Figure 5. Hypothesis testing result", out.width = '80%'}
 knitr::include_graphics("../results/04_h0_dist.png")
 ```
 
-From figure 1, we can see that the observed test statistics (red line) fall within the significance threshold (blue line), we fail to reject $H_0$.
+From figure 5, we can see that the observed test statistics (red line) fall within the significance threshold (blue line), we fail to reject $H_0$.
 
 ```{r p_value result, echo=FALSE}
-kable(p_value, caption = "Table 2. p-value for the test.", col.names = 'p-value') |>
+kable(p_value, caption = "Table 4. p-value for the test.", col.names = 'p-value') |>
   kable_styling(full_width = FALSE, position = "left")
 ```
 
