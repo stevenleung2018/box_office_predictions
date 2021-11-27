@@ -99,5 +99,7 @@ The results show that athletes under 25 have not been more successful in the oly
 
 2. For the majority of events, experience still plays a very important role in winning a medal.
 
+We also found a couple of papers [@singh2021olympic] and [@elmenshawy2015rise] that suggest that it is more likely for an athlete to win a medal when he has more experience.
+
 
 # References

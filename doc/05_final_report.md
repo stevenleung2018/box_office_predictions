@@ -652,93 +652,46 @@ medal
 <tbody>
 <tr>
 <td style="text-align:right;">
-3624
+46458
 </td>
 <td style="text-align:left;">
-Jimmy Anak Ahar
+Markus Hasler
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-22
+34
 </td>
 <td style="text-align:right;">
-173
+171
 </td>
 <td style="text-align:right;">
-65
+68
 </td>
 <td style="text-align:left;">
-Brunei
+Liechtenstein
 </td>
 <td style="text-align:left;">
-BRU
+LIE
 </td>
 <td style="text-align:left;">
-2004 Summer
+2006 Winter
 </td>
 <td style="text-align:right;">
-2004
-</td>
-<td style="text-align:left;">
-Summer
-</td>
-<td style="text-align:left;">
-Athina
-</td>
-<td style="text-align:left;">
-Athletics
-</td>
-<td style="text-align:left;">
-Athletics Men’s 1,500 metres
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-129842
-</td>
-<td style="text-align:left;">
-Marie Helene "Marie-Helene" Westin-stlund
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:right;">
-21
-</td>
-<td style="text-align:right;">
-168
-</td>
-<td style="text-align:right;">
-55
-</td>
-<td style="text-align:left;">
-Sweden
-</td>
-<td style="text-align:left;">
-SWE
-</td>
-<td style="text-align:left;">
-1988 Winter
-</td>
-<td style="text-align:right;">
-1988
+2006
 </td>
 <td style="text-align:left;">
 Winter
 </td>
 <td style="text-align:left;">
-Calgary
+Torino
 </td>
 <td style="text-align:left;">
 Cross Country Skiing
 </td>
 <td style="text-align:left;">
-Cross Country Skiing Women’s 5 kilometres
+Cross Country Skiing Men’s 50 kilometres
 </td>
 <td style="text-align:left;">
 NA
@@ -746,46 +699,46 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-67034
+42977
 </td>
 <td style="text-align:left;">
-Robert Lattermann
+Brbel Grimmer
 </td>
 <td style="text-align:left;">
-M
+F
 </td>
 <td style="text-align:right;">
-25
+19
 </td>
 <td style="text-align:right;">
-NA
+168
 </td>
 <td style="text-align:right;">
-NA
+61
 </td>
 <td style="text-align:left;">
-Austria
+Germany
 </td>
 <td style="text-align:left;">
-AUT
+GER
 </td>
 <td style="text-align:left;">
-1956 Summer
+1964 Summer
 </td>
 <td style="text-align:right;">
-1956
+1964
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Stockholm
+Tokyo
 </td>
 <td style="text-align:left;">
-Equestrianism
+Swimming
 </td>
 <td style="text-align:left;">
-Equestrianism Mixed Dressage, Individual
+Swimming Women’s 4 x 100 metres Medley Relay
 </td>
 <td style="text-align:left;">
 NA
@@ -793,46 +746,46 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-106156
+67080
 </td>
 <td style="text-align:left;">
-Johann "Hans" Sauter
+Bla Laufer
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-23
+20
 </td>
 <td style="text-align:right;">
-NA
+165
 </td>
 <td style="text-align:right;">
-NA
+58
 </td>
 <td style="text-align:left;">
-Austria
+Hungary
 </td>
 <td style="text-align:left;">
-AUT
+HUN
 </td>
 <td style="text-align:left;">
-1948 Summer
+1976 Summer
 </td>
 <td style="text-align:right;">
-1948
+1976
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-London
+Montreal
 </td>
 <td style="text-align:left;">
 Gymnastics
 </td>
 <td style="text-align:left;">
-Gymnastics Men’s Parallel Bars
+Gymnastics Men’s Team All-Around
 </td>
 <td style="text-align:left;">
 NA
@@ -840,46 +793,93 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-49866
+125792
 </td>
 <td style="text-align:left;">
-Emil Paul Anton Hoppe
+Stefana Veljkovi
 </td>
 <td style="text-align:left;">
-M
+F
 </td>
 <td style="text-align:right;">
-52
+18
 </td>
 <td style="text-align:right;">
-NA
+190
 </td>
 <td style="text-align:right;">
-NA
+76
 </td>
 <td style="text-align:left;">
-Austria
+Serbia
 </td>
 <td style="text-align:left;">
-AUT
+SRB
 </td>
 <td style="text-align:left;">
-1928 Summer
+2008 Summer
 </td>
 <td style="text-align:right;">
-1928
+2008
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Amsterdam
+Beijing
 </td>
 <td style="text-align:left;">
-Art Competitions
+Volleyball
 </td>
 <td style="text-align:left;">
-Art Competitions Mixed Architecture, Architectural Designs
+Volleyball Women’s Volleyball
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+97977
+</td>
+<td style="text-align:left;">
+Carlos Eduardo Quipo Pilataxi
+</td>
+<td style="text-align:left;">
+M
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+156
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Ecuador
+</td>
+<td style="text-align:left;">
+ECU
+</td>
+<td style="text-align:left;">
+2016 Summer
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:left;">
+Summer
+</td>
+<td style="text-align:left;">
+Rio de Janeiro
+</td>
+<td style="text-align:left;">
+Boxing
+</td>
+<td style="text-align:left;">
+Boxing Men’s Light-Flyweight
 </td>
 <td style="text-align:left;">
 NA
@@ -1107,6 +1107,10 @@ attribute this result to two different factors:
 2.  For the majority of events, experience still plays a very important
     role in winning a medal.
 
+We also found a couple of papers (Singh 2021) and (Elmenshawy, Machin,
+and Tanaka 2015) that suggest that it is more likely for an athlete to
+win a medal when he has more experience.
+
 # References
 
 Bray, Andrew, Chester Ismay, Evgeni Chasnovski, Simon Couch, Ben Baumer,
@@ -1115,6 +1119,9 @@ and Mine Cetinkaya-Rundel. 2021. *Infer: Tidy Statistical Inference*.
 
 de Jonge, Edwin. 2020. *Docopt: Command-Line Interface Specification
 Language*. <https://CRAN.R-project.org/package=docopt>.
+
+Elmenshawy, Ahmed R, Daniel R Machin, and Hirofumi Tanaka. 2015. “A Rise
+in Peak Performance Age in Female Athletes.” *Age* 37 (3): 1–8.
 
 McKinney, Wes. 2010. “Data Structures for Statistical Computing in
 Python.” In *Proceedings of the 9th Python in Science Conference*,
@@ -1135,6 +1142,9 @@ Computing*. Vienna, Austria: R Foundation for Statistical Computing.
 Robinson, David, Alex Hayes, and Simon Couch. 2021. *Broom: Convert
 Statistical Objects into Tidy Tibbles*.
 <https://CRAN.R-project.org/package=broom>.
+
+Singh, Dr Preet Deep. 2021. “Olympic Medals: Matter of Nerves.”
+*Available at SSRN 3901321*.
 
 VanderPlas, Jacob, Brian E Granger, Jeffrey Heer, Dominik Moritz, Kanit
 Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben
