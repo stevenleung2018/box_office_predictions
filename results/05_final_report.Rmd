@@ -47,11 +47,11 @@ options(scipen = 0, digits = 3)
 
 # Summary
 
-Here we attempt to perform a hypothesis test on the question is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?. Our final result was very conclusive, since we got a p-value of 1 in our hypothesis test. We used simulation methods to generate our null hypothesis and placed our observed test statistic on it to find a visually consistent answer with the p-value. We did not have enough statistical evidence to say that the proportions mentioned are not equal.
+Here we attempt to perform a hypothesis test on the question, "Is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?". Our final result was very conclusive, since we got a p-value of 1 in our hypothesis test. We used simulation methods to generate our null hypothesis and placed our observed test statistic on it to find a visually consistent answer with the p-value. We did not have enough statistical evidence to say that the proportions mentioned are not equal.
 
 # Introduction
 
-It is known that olympic athletes require to train year after year for their shot at winning a medal for their country. In addition to physical strenght, the right mental state is very important for success in these events. It is a common conception to think that the younger the athlete, the stronger and the more likely it is for him/her to win a spot on the podium. But is that enough to win a medal? Does experience play a more important role? For this project we will attempt to make a hypothesis test to answer the question - is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?
+It is known that Olympic athletes require to train year after year for their shot at winning a medal for their country. In addition to physical strength, the right mental state is very important for success in these events. It is a common conception to think that the younger the athlete, the stronger and the more likely it is for him/her to win a spot on the podium. But is that enough to win a medal? Does experience play a more important role? For this project we will attempt to make a hypothesis test to answer the question - is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?
 
 **Limitations and assumptions**: 
 

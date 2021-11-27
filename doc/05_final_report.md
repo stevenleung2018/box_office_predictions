@@ -1,8 +1,8 @@
 # Summary
 
-Here we attempt to perform a hypothesis test on the question is the
+Here we attempt to perform a hypothesis test on the question, “Is the
 proportion of athletes younger than 25 that win a medal greater than the
-proportion of athletes of age 25 or older that win a medal?. Our final
+proportion of athletes of age 25 or older that win a medal?”. Our final
 result was very conclusive, since we got a p-value of 1 in our
 hypothesis test. We used simulation methods to generate our null
 hypothesis and placed our observed test statistic on it to find a
@@ -12,9 +12,9 @@ equal.
 
 # Introduction
 
-It is known that olympic athletes require to train year after year for
+It is known that Olympic athletes require to train year after year for
 their shot at winning a medal for their country. In addition to physical
-strenght, the right mental state is very important for success in these
+strength, the right mental state is very important for success in these
 events. It is a common conception to think that the younger the athlete,
 the stronger and the more likely it is for him/her to win a spot on the
 podium. But is that enough to win a medal? Does experience play a more
@@ -652,104 +652,10 @@ medal
 <tbody>
 <tr>
 <td style="text-align:right;">
-9773
+3624
 </td>
 <td style="text-align:left;">
-Marco Belotti
-</td>
-<td style="text-align:left;">
-M
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-185
-</td>
-<td style="text-align:right;">
-76
-</td>
-<td style="text-align:left;">
-Italy
-</td>
-<td style="text-align:left;">
-ITA
-</td>
-<td style="text-align:left;">
-2016 Summer
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:left;">
-Summer
-</td>
-<td style="text-align:left;">
-Rio de Janeiro
-</td>
-<td style="text-align:left;">
-Swimming
-</td>
-<td style="text-align:left;">
-Swimming Men’s 4 x 200 metres Freestyle Relay
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-48835
-</td>
-<td style="text-align:left;">
-Juha Petter Hirvi
-</td>
-<td style="text-align:left;">
-M
-</td>
-<td style="text-align:right;">
-36
-</td>
-<td style="text-align:right;">
-177
-</td>
-<td style="text-align:right;">
-78
-</td>
-<td style="text-align:left;">
-Finland
-</td>
-<td style="text-align:left;">
-FIN
-</td>
-<td style="text-align:left;">
-1996 Summer
-</td>
-<td style="text-align:right;">
-1996
-</td>
-<td style="text-align:left;">
-Summer
-</td>
-<td style="text-align:left;">
-Atlanta
-</td>
-<td style="text-align:left;">
-Shooting
-</td>
-<td style="text-align:left;">
-Shooting Men’s Air Rifle, 10 metres
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-112863
-</td>
-<td style="text-align:left;">
-Julio Solaun Garteizgogeascoa
+Jimmy Anak Ahar
 </td>
 <td style="text-align:left;">
 M
@@ -758,34 +664,34 @@ M
 22
 </td>
 <td style="text-align:right;">
-180
+173
 </td>
 <td style="text-align:right;">
-66
+65
 </td>
 <td style="text-align:left;">
-Spain
+Brunei
 </td>
 <td style="text-align:left;">
-ESP
+BRU
 </td>
 <td style="text-align:left;">
-1964 Summer
+2004 Summer
 </td>
 <td style="text-align:right;">
-1964
+2004
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Tokyo
+Athina
 </td>
 <td style="text-align:left;">
-Hockey
+Athletics
 </td>
 <td style="text-align:left;">
-Hockey Men’s Hockey
+Athletics Men’s 1,500 metres
 </td>
 <td style="text-align:left;">
 NA
@@ -793,10 +699,104 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-101653
+129842
 </td>
 <td style="text-align:left;">
-Henrik Rdl
+Marie Helene "Marie-Helene" Westin-stlund
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:left;">
+Sweden
+</td>
+<td style="text-align:left;">
+SWE
+</td>
+<td style="text-align:left;">
+1988 Winter
+</td>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:left;">
+Winter
+</td>
+<td style="text-align:left;">
+Calgary
+</td>
+<td style="text-align:left;">
+Cross Country Skiing
+</td>
+<td style="text-align:left;">
+Cross Country Skiing Women’s 5 kilometres
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+67034
+</td>
+<td style="text-align:left;">
+Robert Lattermann
+</td>
+<td style="text-align:left;">
+M
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Austria
+</td>
+<td style="text-align:left;">
+AUT
+</td>
+<td style="text-align:left;">
+1956 Summer
+</td>
+<td style="text-align:right;">
+1956
+</td>
+<td style="text-align:left;">
+Summer
+</td>
+<td style="text-align:left;">
+Stockholm
+</td>
+<td style="text-align:left;">
+Equestrianism
+</td>
+<td style="text-align:left;">
+Equestrianism Mixed Dressage, Individual
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+106156
+</td>
+<td style="text-align:left;">
+Johann "Hans" Sauter
 </td>
 <td style="text-align:left;">
 M
@@ -805,34 +805,34 @@ M
 23
 </td>
 <td style="text-align:right;">
-200
+NA
 </td>
 <td style="text-align:right;">
-92
+NA
 </td>
 <td style="text-align:left;">
-Germany
+Austria
 </td>
 <td style="text-align:left;">
-GER
+AUT
 </td>
 <td style="text-align:left;">
-1992 Summer
+1948 Summer
 </td>
 <td style="text-align:right;">
-1992
+1948
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Barcelona
+London
 </td>
 <td style="text-align:left;">
-Basketball
+Gymnastics
 </td>
 <td style="text-align:left;">
-Basketball Men’s Basketball
+Gymnastics Men’s Parallel Bars
 </td>
 <td style="text-align:left;">
 NA
@@ -840,46 +840,46 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-8163
+49866
 </td>
 <td style="text-align:left;">
-Manuel Jos Lopes Pinto Barroso
+Emil Paul Anton Hoppe
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-20
+52
 </td>
 <td style="text-align:right;">
-175
+NA
 </td>
 <td style="text-align:right;">
-65
+NA
 </td>
 <td style="text-align:left;">
-Portugal
+Austria
 </td>
 <td style="text-align:left;">
-POR
+AUT
 </td>
 <td style="text-align:left;">
-1984 Summer
+1928 Summer
 </td>
 <td style="text-align:right;">
-1984
+1928
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Los Angeles
+Amsterdam
 </td>
 <td style="text-align:left;">
-Modern Pentathlon
+Art Competitions
 </td>
 <td style="text-align:left;">
-Modern Pentathlon Men’s Individual
+Art Competitions Mixed Architecture, Architectural Designs
 </td>
 <td style="text-align:left;">
 NA
