@@ -35,24 +35,33 @@ The analysis can be reproduced by following these steps:
 
 4. Clean the downloaded data by running the script src/02_cleaning.py:
 
+```
     python src/02_cleaning.py --reading_path="data/raw/olympics.csv" --saving_path="data/olympics_cleaned.csv"
+```
 
 5. Create the exploratory data analysis figures and tables:
 
+```
     python src/03_EDA_olympics.py --reading_path="data/olympics_cleaned.csv" --saving_path="results"
+```
 
 6. Generate the HTML file displaying the EDA results:
 
+```
     Rscript -e "rmarkdown::render('results/03_EDA.Rmd')"
+```
 
 7. Generate the hypothesis test figures and tables:
 
+```
     Rscript src/04_htest.R --data="data/olympics_cleaned.csv" --saving_path="results"
+```
 
 8. Render the final HTML and markdown file of the final report:
 
+```
     Rscript -e "rmarkdown::render('results/05_final_report.Rmd', 'all', output_dir='doc')"
-
+```
 
 ## Dependencies
 
