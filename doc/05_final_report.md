@@ -652,46 +652,46 @@ medal
 <tbody>
 <tr>
 <td style="text-align:right;">
-126032
+9773
 </td>
 <td style="text-align:left;">
-Hendrik Verheijen
+Marco Belotti
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-29
+27
 </td>
 <td style="text-align:right;">
-NA
+185
 </td>
 <td style="text-align:right;">
-NA
+76
 </td>
 <td style="text-align:left;">
-Netherlands
+Italy
 </td>
 <td style="text-align:left;">
-NED
+ITA
 </td>
 <td style="text-align:left;">
-1928 Summer
+2016 Summer
 </td>
 <td style="text-align:right;">
-1928
+2016
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Amsterdam
+Rio de Janeiro
 </td>
 <td style="text-align:left;">
-Weightlifting
+Swimming
 </td>
 <td style="text-align:left;">
-Weightlifting Men’s Heavyweight
+Swimming Men’s 4 x 200 metres Freestyle Relay
 </td>
 <td style="text-align:left;">
 NA
@@ -699,28 +699,28 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-60497
+48835
 </td>
 <td style="text-align:left;">
-Marshall King
+Juha Petter Hirvi
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-30
+36
 </td>
 <td style="text-align:right;">
-NA
+177
 </td>
 <td style="text-align:right;">
-NA
+78
 </td>
 <td style="text-align:left;">
-Ireland
+Finland
 </td>
 <td style="text-align:left;">
-IRL
+FIN
 </td>
 <td style="text-align:left;">
 1996 Summer
@@ -735,10 +735,10 @@ Summer
 Atlanta
 </td>
 <td style="text-align:left;">
-Sailing
+Shooting
 </td>
 <td style="text-align:left;">
-Sailing Mixed Three Person Keelboat
+Shooting Men’s Air Rifle, 10 metres
 </td>
 <td style="text-align:left;">
 NA
@@ -746,93 +746,46 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-63698
+112863
 </td>
 <td style="text-align:left;">
-Frantiek Krlk
+Julio Solaun Garteizgogeascoa
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-30
+22
 </td>
 <td style="text-align:right;">
-186
+180
 </td>
 <td style="text-align:right;">
-91
+66
 </td>
 <td style="text-align:left;">
-Czechoslovakia
+Spain
 </td>
 <td style="text-align:left;">
-TCH
+ESP
 </td>
 <td style="text-align:left;">
-1972 Summer
+1964 Summer
 </td>
 <td style="text-align:right;">
-1972
+1964
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Munich
+Tokyo
 </td>
 <td style="text-align:left;">
-Handball
+Hockey
 </td>
 <td style="text-align:left;">
-Handball Men’s Handball
-</td>
-<td style="text-align:left;">
-Silver
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-19587
-</td>
-<td style="text-align:left;">
-Carmen Anita Chal Quilumba
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:right;">
-38
-</td>
-<td style="text-align:right;">
-176
-</td>
-<td style="text-align:right;">
-107
-</td>
-<td style="text-align:left;">
-Ecuador
-</td>
-<td style="text-align:left;">
-ECU
-</td>
-<td style="text-align:left;">
-2004 Summer
-</td>
-<td style="text-align:right;">
-2004
-</td>
-<td style="text-align:left;">
-Summer
-</td>
-<td style="text-align:left;">
-Athina
-</td>
-<td style="text-align:left;">
-Judo
-</td>
-<td style="text-align:left;">
-Judo Women’s Heavyweight
+Hockey Men’s Hockey
 </td>
 <td style="text-align:left;">
 NA
@@ -840,46 +793,93 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-84725
+101653
 </td>
 <td style="text-align:left;">
-Ana Sabine Naumann
+Henrik Rdl
 </td>
 <td style="text-align:left;">
-F
+M
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+92
+</td>
+<td style="text-align:left;">
+Germany
+</td>
+<td style="text-align:left;">
+GER
+</td>
+<td style="text-align:left;">
+1992 Summer
+</td>
+<td style="text-align:right;">
+1992
+</td>
+<td style="text-align:left;">
+Summer
+</td>
+<td style="text-align:left;">
+Barcelona
+</td>
+<td style="text-align:left;">
+Basketball
+</td>
+<td style="text-align:left;">
+Basketball Men’s Basketball
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8163
+</td>
+<td style="text-align:left;">
+Manuel Jos Lopes Pinto Barroso
+</td>
+<td style="text-align:left;">
+M
 </td>
 <td style="text-align:right;">
 20
 </td>
 <td style="text-align:right;">
-165
+175
 </td>
 <td style="text-align:right;">
-58
+65
 </td>
 <td style="text-align:left;">
-Argentina
+Portugal
 </td>
 <td style="text-align:left;">
-ARG
+POR
 </td>
 <td style="text-align:left;">
-1968 Winter
+1984 Summer
 </td>
 <td style="text-align:right;">
-1968
+1984
 </td>
 <td style="text-align:left;">
-Winter
+Summer
 </td>
 <td style="text-align:left;">
-Grenoble
+Los Angeles
 </td>
 <td style="text-align:left;">
-Alpine Skiing
+Modern Pentathlon
 </td>
 <td style="text-align:left;">
-Alpine Skiing Women’s Giant Slalom
+Modern Pentathlon Men’s Individual
 </td>
 <td style="text-align:left;">
 NA
@@ -1000,7 +1000,7 @@ found here:
 
 <table class="table" style="width: auto !important; ">
 <caption>
-Table 1. Data summary.
+Table 3. Data summary
 </caption>
 <thead>
 <tr>
@@ -1055,9 +1055,9 @@ age of 25 and 13.68% of them got a medal in the event, while there are
 130,508 athletes equal to or above the age of 25 and 16.18% of them got
 a medal in the event.
 
-<img src="../results/04_h0_dist.png" alt="Figure 1. Hypothesis testing result" width="80%" />
+<img src="../results/04_h0_dist.png" alt="Figure 5. Hypothesis testing result" width="80%" />
 <p class="caption">
-Figure 1. Hypothesis testing result
+Figure 5. Hypothesis testing result
 </p>
 
 After generating the null distribution, and placing our observed test
@@ -1067,7 +1067,7 @@ line), therefore we fail to reject *H*<sub>0</sub>.
 
 <table class="table" style="width: auto !important; ">
 <caption>
-Table 2. p-value for the test.
+Table 4. p-value for the test.
 </caption>
 <thead>
 <tr>
