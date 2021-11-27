@@ -14,7 +14,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-```{r load test results}
+```{r load test results, echo=FALSE}
 p_value <- readRDS("../results/04_p_value.rds")
 summary <- readRDS("../results/04_summary.rds")
 ```
