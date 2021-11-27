@@ -29,7 +29,9 @@ The analysis can be reproduced by following these steps:
 2. Navigate into the root directory of the cloned repository on your local machine
 3. Run src/01_download_data.py by executing the following command line:
 
+```
     python src/01_download_data.py --url="https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/olympics.csv" --saving_path="data/raw/olympics.csv"
+```
 
 4. Clean the downloaded data by running the script src/02_cleaning.py:
 
