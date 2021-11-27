@@ -71,7 +71,7 @@ The Python environment required to run every python script can be found [here](h
         - docopt=0.6.2
         - pandas=1.3.4
         - altair=4.1.0
-        - altair_viewer-0.4.0
+        - altair_viewer=0.4.0
         
     - R 4.1.2 and libraries:
         - readr=2.1.0
