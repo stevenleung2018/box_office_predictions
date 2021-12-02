@@ -67,6 +67,8 @@ The Python environment required to run every python script can be found [here](h
         - docopt=0.7.1
         - kableExtra=1.3.4
 
+    - GNU make 3.81
+
 ## License
 
 The Olympic Medal H-test project is available under the MIT license. See [LICENSE](https://github.com/UBC-MDS/olympic_medal_htest/blob/main/LICENSE) for more information.
