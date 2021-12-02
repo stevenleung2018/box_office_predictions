@@ -31,41 +31,18 @@ The analysis can be reproduced by following these steps:
 
 1. Clone the GitHub repository and install the required [dependencies](#dependencies)
 2. Navigate into the root directory of the cloned repository on your local machine
-3. Run src/01_download_data.py by executing the following command line:
+3. Run the `Make` file with the following command:
 
 ```
-    python src/01_download_data.py --url="https://github.com/rfordatascience/tidytuesday/raw/master/data/2021/2021-07-27/olympics.csv" --saving_path="data/raw/olympics.csv"
+make all
 ```
 
-4. Clean the downloaded data by running the script src/02_cleaning.py:
+The local repository can be reset to the initial cloned state by running:
 
 ```
-    python src/02_cleaning.py --reading_path="data/raw/olympics.csv" --saving_path="data/olympics_cleaned.csv"
+make clean
 ```
 
-5. Create the exploratory data analysis figures and tables:
-
-```
-    python src/03_EDA_olympics.py --reading_path="data/olympics_cleaned.csv" --saving_path="results"
-```
-
-6. Generate the HTML file displaying the EDA results:
-
-```
-    Rscript -e "rmarkdown::render('results/03_EDA.Rmd')"
-```
-
-7. Generate the hypothesis test figures and tables:
-
-```
-    Rscript src/04_htest.R --data="data/olympics_cleaned.csv" --saving_path="results"
-```
-
-8. Render the final HTML and markdown file of the final report:
-
-```
-    Rscript -e "rmarkdown::render('results/05_final_report.Rmd', 'all', output_dir='doc')"
-```
 
 ## Dependencies
 
