@@ -31,7 +31,7 @@ The analysis can be reproduced by following these steps:
 
 1. Clone the GitHub repository and install the required [dependencies](#dependencies)
 2. Navigate into the root directory of the cloned repository on your local machine
-3. Run the `Make` file with the following command:
+3. Run the `Makefile` file with the following command:
 
 ```
 make all
