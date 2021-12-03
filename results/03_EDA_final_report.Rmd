@@ -40,8 +40,6 @@ The data dictionary is available here:
 
 <https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-27#olympicscsv>
 
-And I am including it for your convenience:
-
 | variable | class     | description                        |
 |:---------|:----------|:-----------------------------------|
 | id       | double    | Athlete ID                         |
