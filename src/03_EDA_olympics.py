@@ -116,12 +116,7 @@ def main(reading_path, saving_path):
 
     # Figure 5
     cat_cols = ['sex',
-                'season',
-                'noc',
-                'games',
-                'city',
-                'sport',
-                'event']
+                'season']
 
     cat_plots = alt.Chart(olympics_medals_df).mark_boxplot().encode(
         x=alt.X('age', type='quantitative'),
@@ -140,7 +135,30 @@ def main(reading_path, saving_path):
 
     cat_plots.save(os.path.join(saving_path,
                                 "03_Figure5_cat_plots.png"))
+    
+    cat_cols_2 = ['noc',
+                'games',
+                'city',
+                'sport',
+                'event']
 
+    cat_plots_2 = alt.Chart(olympics_medals_df).mark_boxplot().encode(
+        x=alt.X('age', type='quantitative'),
+        y=alt.Y(alt.repeat('row'), type='nominal', axis=alt.Axis(labels=False)),
+        color='medal:N',
+        tooltip=['age']
+    ).properties(
+        height=300,
+        width=150
+    ).facet(
+        facet='medal:N',
+        columns=3
+    ).repeat(
+        row=cat_cols_2
+    )
+
+    cat_plots_2.save(os.path.join(saving_path,
+                                "03_Figure6_cat_plots_2.png"))
 
 if __name__ == "__main__":
     main(opt["--reading_path"], opt["--saving_path"])
