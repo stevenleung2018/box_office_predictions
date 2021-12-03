@@ -38,7 +38,6 @@ doc/05_final_report.md : results/03_EDA_final_report.Rmd results/04_htest_final_
 	
 clean :
 	rm -rf data/raw/olympics.csv
-	rm -rf data/raw
 	rm -rf data/olympics_cleaned.csv
 	rm -rf results/03_Figure1_age_hist.png
 	rm -rf results/03_Figure2_numeric_cols_plot.png
