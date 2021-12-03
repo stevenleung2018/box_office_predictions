@@ -40,8 +40,6 @@ The data dictionary is available here:
 
 <https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-27#olympicscsv>
 
-And I am including it for your convenience:
-
 | variable | class     | description                        |
 |:---------|:----------|:-----------------------------------|
 | id       | double    | Athlete ID                         |
@@ -137,8 +135,14 @@ All the modes for `Gold`, `Silver` and `Bronze` appear to be the same as the ove
 
 Now let's also explore the categorical features.
 
-```{r figure-5, out.width = "100%", fig.cap = 'Figure 5: Age vs Categorical features', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+```{r figure-5, out.width = "100%", fig.cap = 'Figure 5: Age vs Categorical features (sex and season)', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
 include_graphics("03_Figure5_cat_plots.png")
+
+#![Figure 5: Age vs Categorical features](03_Figure5_cat_plots.png)
+```
+
+```{r figure-6, out.width = "100%", fig.cap = 'Figure 6: Age vs Categorical features (other features)', fig.retina=2, fig.align="center", echo=FALSE, message=FALSE}
+include_graphics("03_Figure6_cat_plots_2.png")
 
 #![Figure 5: Age vs Categorical features](03_Figure5_cat_plots.png)
 ```
@@ -148,7 +152,9 @@ include_graphics("03_Figure5_cat_plots.png")
 1. `Sex` - The mail medalists seem to have a higher mean age than female counterparts but not by a lot.  The age distribution of male medalists is also more right-skewed compared with female medalists;
 2. `season` - The age spread is larger for `summer` over `winter` and the distribution of `summer` is more right-skewed than `winter`.
 
-We know that the labels are not very readable, but for the other categorical features, namely `noc`, `games`, `city`, `sport` and `event`, and for the purpose of this EDA, it is just to show that:
+These 2 categorical features may help if we want expand our analysis into how age relates to the winning of medals.
+
+For the other categorical features, namely `noc`, `games`, `city`, `sport` and `event`:
 
 1. `age` varies greatly across those categorical features; and
 2. The 3 medals appears to distribute very similarly with all those features.
