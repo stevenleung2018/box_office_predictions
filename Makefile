@@ -33,18 +33,7 @@ results/04_h0_dist.png : src/04_htest.R data/olympics_cleaned.csv
 
 # generate final report
 doc/05_final_report.html \
-doc/05_final_report.md : results/03_EDA_final_report.Rmd \
-data/olympics_cleaned.csv \
-results/03_Figure1_age_hist.png \
-results/03_Figure2_numeric_cols_plot.png \
-results/03_Figure3_numeric_cols_plot.png \
-results/03_Figure4_age_medals_hist.png \
-results/04_htest_final_report.Rmd \
-results/04_h0_dist.png \
-results/05_final_report.Rmd \
-bibliography.bib \
-results/04_p_value.rds \
-results/04_summary.rds
+doc/05_final_report.md : results/03_EDA_final_report.Rmd results/04_htest_final_report.Rmd results/05_final_report.Rmd bibliography.bib results/04_p_value.rds
 	Rscript -e "rmarkdown::render('results/05_final_report.Rmd', 'all', output_dir='doc')"
 	
 clean :
