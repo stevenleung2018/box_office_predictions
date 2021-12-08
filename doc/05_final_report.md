@@ -97,6 +97,8 @@ The data dictionary is available here:
 
 <https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-27#olympicscsv>
 
+And I am including it for your convenience:
+
 <table>
 <thead>
 <tr class="header">
@@ -650,22 +652,22 @@ medal
 <tbody>
 <tr>
 <td style="text-align:right;">
-6025
+108483
 </td>
 <td style="text-align:left;">
-Charles Allen Austin
+Albert "Al" Sellinger
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-24
+22
 </td>
 <td style="text-align:right;">
-183
+NA
 </td>
 <td style="text-align:right;">
-77
+NA
 </td>
 <td style="text-align:left;">
 United States
@@ -674,69 +676,22 @@ United States
 USA
 </td>
 <td style="text-align:left;">
-1992 Summer
+1936 Summer
 </td>
 <td style="text-align:right;">
-1992
+1936
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-Barcelona
+Berlin
 </td>
 <td style="text-align:left;">
-Athletics
+Cycling
 </td>
 <td style="text-align:left;">
-Athletics Men’s High Jump
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-79965
-</td>
-<td style="text-align:left;">
-ric Millot
-</td>
-<td style="text-align:left;">
-M
-</td>
-<td style="text-align:right;">
-25
-</td>
-<td style="text-align:right;">
-165
-</td>
-<td style="text-align:right;">
-53
-</td>
-<td style="text-align:left;">
-France
-</td>
-<td style="text-align:left;">
-FRA
-</td>
-<td style="text-align:left;">
-1994 Winter
-</td>
-<td style="text-align:right;">
-1994
-</td>
-<td style="text-align:left;">
-Winter
-</td>
-<td style="text-align:left;">
-Lillehammer
-</td>
-<td style="text-align:left;">
-Figure Skating
-</td>
-<td style="text-align:left;">
-Figure Skating Men’s Singles
+Cycling Men’s Tandem Sprint, 2,000 metres
 </td>
 <td style="text-align:left;">
 NA
@@ -744,93 +699,46 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-92815
+57065
 </td>
 <td style="text-align:left;">
-Erecthe Bibiena Mlanie Marie "Bienna" Plgry (-Boiteux)
+Nadja Kamer (-Jnglin)
 </td>
 <td style="text-align:left;">
 F
 </td>
 <td style="text-align:right;">
-28
+23
 </td>
 <td style="text-align:right;">
-NA
+179
 </td>
 <td style="text-align:right;">
-NA
+76
 </td>
 <td style="text-align:left;">
-France
+Switzerland
 </td>
 <td style="text-align:left;">
-FRA
+SUI
 </td>
 <td style="text-align:left;">
-1928 Summer
+2010 Winter
 </td>
 <td style="text-align:right;">
-1928
-</td>
-<td style="text-align:left;">
-Summer
-</td>
-<td style="text-align:left;">
-Amsterdam
-</td>
-<td style="text-align:left;">
-Swimming
-</td>
-<td style="text-align:left;">
-Swimming Women’s 4 x 100 metres Freestyle Relay
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-87887
-</td>
-<td style="text-align:left;">
-Seamus O’Connor
-</td>
-<td style="text-align:left;">
-M
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-180
-</td>
-<td style="text-align:right;">
-75
-</td>
-<td style="text-align:left;">
-Ireland
-</td>
-<td style="text-align:left;">
-IRL
-</td>
-<td style="text-align:left;">
-2014 Winter
-</td>
-<td style="text-align:right;">
-2014
+2010
 </td>
 <td style="text-align:left;">
 Winter
 </td>
 <td style="text-align:left;">
-Sochi
+Vancouver
 </td>
 <td style="text-align:left;">
-Snowboarding
+Alpine Skiing
 </td>
 <td style="text-align:left;">
-Snowboarding Men’s Halfpipe
+Alpine Skiing Women’s Super G
 </td>
 <td style="text-align:left;">
 NA
@@ -838,46 +746,140 @@ NA
 </tr>
 <tr>
 <td style="text-align:right;">
-35775
+49056
 </td>
 <td style="text-align:left;">
-Johann Heinrich Flemer
+Imre Hdos
 </td>
 <td style="text-align:left;">
 M
 </td>
 <td style="text-align:right;">
-20
+28
 </td>
 <td style="text-align:right;">
-NA
+163
 </td>
 <td style="text-align:right;">
-NA
+57
 </td>
 <td style="text-align:left;">
-Netherlands
+Hungary
 </td>
 <td style="text-align:left;">
-NED
+HUN
 </td>
 <td style="text-align:left;">
-1908 Summer
+1956 Summer
 </td>
 <td style="text-align:right;">
-1908
+1956
 </td>
 <td style="text-align:left;">
 Summer
 </td>
 <td style="text-align:left;">
-London
+Melbourne
 </td>
 <td style="text-align:left;">
-Gymnastics
+Wrestling
 </td>
 <td style="text-align:left;">
-Gymnastics Men’s Individual All-Around
+Wrestling Men’s Bantamweight, Greco-Roman
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34123
+</td>
+<td style="text-align:left;">
+George Hardy Farquhar
+</td>
+<td style="text-align:left;">
+M
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Great Britain
+</td>
+<td style="text-align:left;">
+GBR
+</td>
+<td style="text-align:left;">
+1956 Summer
+</td>
+<td style="text-align:right;">
+1956
+</td>
+<td style="text-align:left;">
+Summer
+</td>
+<td style="text-align:left;">
+Melbourne
+</td>
+<td style="text-align:left;">
+Wrestling
+</td>
+<td style="text-align:left;">
+Wrestling Men’s Middleweight, Freestyle
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+42223
+</td>
+<td style="text-align:left;">
+James Edward Graeffe
+</td>
+<td style="text-align:left;">
+M
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Belgium
+</td>
+<td style="text-align:left;">
+BEL
+</td>
+<td style="text-align:left;">
+1936 Winter
+</td>
+<td style="text-align:right;">
+1936
+</td>
+<td style="text-align:left;">
+Winter
+</td>
+<td style="text-align:left;">
+Garmisch-Partenkirchen
+</td>
+<td style="text-align:left;">
+Speed Skating
+</td>
+<td style="text-align:left;">
+Speed Skating Men’s 5,000 metres
 </td>
 <td style="text-align:left;">
 NA
