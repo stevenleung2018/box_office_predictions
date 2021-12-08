@@ -1,5 +1,5 @@
 ---
-title: Under 25 vs Over 25 - Olympic Athletes
+title: Is age associated with success at the Olympics?
 
 # to produce blinded version set to 1
 blinded: 0
@@ -55,7 +55,7 @@ It is known that Olympic athletes require to train year after year for their sho
 
 **Limitations and assumptions**: 
 
-- The age threshold of 25 years old was chosen on intuition. If time was provided, a way to make this analysis more robust would be to make some research and talk to some domain experts to find out if 25 years old is a good threshold to set for this hypothesis test.
+- The age threshold of 25 years old was chosen as this is the median age of the athletes in the data set. If time was provided, a way to make this analysis more robust would be to make some research and talk to some domain experts to find out if 25 years old is a good threshold to set for this hypothesis test.
 
 - The data set contains information from the years 1896 - 2016, therefore, the analysis is taking into consideration all of these records, and the result should be interpreted as the comparison of the proportions mentioned within that time span. The analysis could be improved and give more specific insight if athletes were grouped by years (for example, before 1950 and after 1950) or by season (winter/summer games).
 
