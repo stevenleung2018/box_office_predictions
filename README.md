@@ -1,4 +1,4 @@
-# Olympic Medal Hypothesis Testing
+# Is age associated with success at the Olympics?
 
 -   authors: Steven Leung, Sam Quist, Brandon Lam, Ruben De la Garza Macias
 
@@ -6,11 +6,13 @@ Data analysis project for DSCI 522 (Data Science workflows); a course in the Mas
 
 ## Introduction
 
-For this project we will attempt to make a hypothesis test to answer the question: is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal? We chose this question and this topic since it is a pop culture subject for which we think strong domain is not really needed. It is important to note that the idea for this project is to be able to wrangle the data and test our hypothesis with the tools and techniques that we know how to use at the moment.
+For this project we will attempt to make a hypothesis test to answer the question: is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal? The age threshold of 25 years old was chosen as this is the median age of the athletes in the data set. We chose this question and this topic since it is a pop culture subject for which we think strong domain is not really needed. It is important to note that the idea for this project is to be able to wrangle the data and test our hypothesis with the tools and techniques that we know how to use at the moment.
 
 The data used in this project is a public domain data set of the olympics with information of athletes like nationality, sport/event, year, age, among others, extracted from the publicly available tidytuesday data sets. Each row in the data set represents information of an athlete competing in a certain event, including information of whether the athlete won a medal or not. The testing results and analysis will be presented in the final report.
 
 To answer the question mentioned, we will perform a hypothesis test for the difference in proportions. First, we will perform an EDA (Exploratory Data Analysis) to get a general idea of how the data looks like and we will show this work in the EDA document for this project.
+
+In the EDA, we will explore the age distribution of athletes, the relationship between athletes' age and medals and correlations of athletes's age and other features (e.g. height and weight).
 
 Given that we are going to perform a hypothesis, we defined our null and alternative hypothesis as follows:
 
