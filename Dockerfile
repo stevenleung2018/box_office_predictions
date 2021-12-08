@@ -14,7 +14,7 @@ RUN apt-get update -qq && apt-get --no-install-recommends install \
   docopt \
   kableExtra
 
-#install mamba python distribution
+#install miniconda3 python distribution
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && mkdir /root/.conda \
@@ -24,7 +24,9 @@ RUN wget \
 #create python path
 ENV PATH="/root/miniconda3/bin:${PATH}"
 
+#add necessary conda-forge channel
 RUN conda config --append channels conda-forge
+
 #install python packages
 RUN conda install -y -c anaconda \
     docopt \
