@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Contributing to the project
 
 This outlines how to propose a change to the project.
