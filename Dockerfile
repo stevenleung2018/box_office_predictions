@@ -33,5 +33,7 @@ RUN conda install -y -c anaconda \
     pandas \
     altair \
     altair_viewer \
-    altair_saver \
-    pandoc
+    altair_saver
+
+#install pandoc correctly
+RUN conda install -c conda-forge pandoc
