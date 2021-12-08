@@ -1,5 +1,5 @@
 ---
-title: Under 25 vs Over 25 - Olympic Athletes
+title: Is age associated with success at the Olympics?
 
 # to produce blinded version set to 1
 blinded: 0
@@ -25,7 +25,6 @@ output:
 ```{r blinding, echo=FALSE}
 blind <- FALSE
 ```
-
 
 ```{r load-packages, include=FALSE}
 library(tidyverse)
@@ -53,37 +52,37 @@ Here we attempt to perform a hypothesis test on the question, "Is the proportion
 
 It is known that Olympic athletes require to train year after year for their shot at winning a medal for their country. In addition to physical strength, the right mental state is very important for success in these events. It is a common conception to think that the younger the athlete, the stronger and the more likely it is for him/her to win a spot on the podium. But is that enough to win a medal? Does experience play a more important role? For this project we will attempt to make a hypothesis test to answer the question - is the proportion of athletes younger than 25 that win a medal greater than the proportion of athletes of age 25 or older that win a medal?
 
-**Limitations and assumptions**: 
+**Limitations and assumptions**:
 
-- The age threshold of 25 years old was chosen on intuition. If time was provided, a way to make this analysis more robust would be to make some research and talk to some domain experts to find out if 25 years old is a good threshold to set for this hypothesis test.
+-   The age threshold of 25 years old was chosen as this is the median age of the athletes in the data set. If time was provided, a way to make this analysis more robust would be to make some research and talk to some domain experts to find out if 25 years old is a good threshold to set for this hypothesis test.
 
-- The data set contains information from the years 1896 - 2016, therefore, the analysis is taking into consideration all of these records, and the result should be interpreted as the comparison of the proportions mentioned within that time span. The analysis could be improved and give more specific insight if athletes were grouped by years (for example, before 1950 and after 1950) or by season (winter/summer games).
+-   The data set contains information from the years 1896 - 2016, therefore, the analysis is taking into consideration all of these records, and the result should be interpreted as the comparison of the proportions mentioned within that time span. The analysis could be improved and give more specific insight if athletes were grouped by years (for example, before 1950 and after 1950) or by season (winter/summer games).
 
-- The same athlete could appear in the same event for several years. If this is the case, each appearance will be taken as a different record, since we are taking into account each combination of athlete-event-games.
+-   The same athlete could appear in the same event for several years. If this is the case, each appearance will be taken as a different record, since we are taking into account each combination of athlete-event-games.
 
 # Methods
 
 R programming language [@R] and the following R packages were used to perform the analysis:
 
-- tidyverse [@tidyverse]
+-   tidyverse [@tidyverse]
 
-- knitr [@knitr]
+-   knitr [@knitr]
 
-- infer [@infer]
+-   infer [@infer]
 
-- broom [@broom]
+-   broom [@broom]
 
-- docopt [@docopt]
+-   docopt [@docopt]
 
-- kableExtra [@kableExtra]
+-   kableExtra [@kableExtra]
 
 Also, python language [@python] and the following packages were used for the EDA:
 
-- os [@os]
+-   os [@os]
 
-- altair [@vanderplas2018altair]
+-   altair [@vanderplas2018altair]
 
-- pandas [@pandas]
+-   pandas [@pandas]
 
 ```{r eda, child="../results/03_EDA_final_report.Rmd"}
 ```
@@ -95,11 +94,10 @@ Also, python language [@python] and the following packages were used for the EDA
 
 The results show that athletes under 25 have not been more successful in the olympics in comparison to athletes who are 25 and older. We can attribute this result to two different factors:
 
-1. The olympics have many different types of events, and these events have been changing through the years. Many of these sports are dominated by older athletes, since they require more experience and hours put into the sport, rather than physical dexterity. Examples for these events could be art competitions (sculpturing, music, among others in the 1940's), archery (1900's), shooting (1900's).
+1.  The olympics have many different types of events, and these events have been changing through the years. Many of these sports are dominated by older athletes, since they require more experience and hours put into the sport, rather than physical dexterity. Examples for these events could be art competitions (sculpturing, music, among others in the 1940's), archery (1900's), shooting (1900's).
 
-2. For the majority of events, experience still plays a very important role in winning a medal.
+2.  For the majority of events, experience still plays a very important role in winning a medal.
 
 We also found a couple of papers [@singh2021olympic] and [@elmenshawy2015rise] that suggest that it is more likely for an athlete to win a medal when he has more experience.
-
 
 # References
