@@ -29,6 +29,22 @@ The rendered final report is located [here](https://github.com/UBC-MDS/olympic_m
 
 ## Usage
 
+#### 1\. Using Docker
+
+Please install [Docker](https://www.docker.com/get-started) if you have not already done so.  Then clone this repository and run the following command at the command line/terminal from the root directory of this project:
+
+```bash
+docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest:v0.5.0 make -C /home/data_analysis
+```
+
+The local repository can be reset to the initial cloned state by running the following from the root directory of this project:
+
+```bash
+docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest:v0.5.0 make -C /home/data_analysis clean
+```
+
+#### 2\. Without using Docker
+
 The analysis can be reproduced by following these steps:
 
 1. Clone the GitHub repository and install the required [dependencies](#dependencies)
