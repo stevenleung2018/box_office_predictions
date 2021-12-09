@@ -42,6 +42,7 @@ The local repository can be reset to the initial cloned state by running the fol
 ```bash
 docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest@sha256:693464b47beca5240bd52df7040030bfa1be4a66272900cb95b2636db5d27644 make -C /home/data_analysis clean
 ```
+
 Please note that the `Dockerfile` pins the versions of all the software packages listed under [Dependencies](#dependencies) except the R packages, which are instead based on the `rocker/tidyverse:4.1` Docker image the R packages of which are the same as our dependencies.  Since, however, we are not pinning the versions of those packages, the installed versions of the packages in the Docker image may change in the future.  We have chosen not to pin to exact versions of the R packages to avoid bringing in some unnecessary packages and over-complicate this project.
 
 #### 2\. Without using Docker
