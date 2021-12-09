@@ -29,11 +29,11 @@ RUN conda config --append channels conda-forge
 
 #install python packages
 RUN conda install -y -c anaconda \
-    docopt \
-    pandas \
-    altair \
-    altair_viewer \
-    altair_saver
+    docopt=0.6.* \
+    pandas=1.3.* \
+    altair=4.1.* \
+    altair_viewer=0.4.* \
+    altair_saver=0.5.*
 
 #install pandoc correctly
-RUN conda install -c conda-forge pandoc
+RUN conda install -c conda-forge pandoc=2.16.*
