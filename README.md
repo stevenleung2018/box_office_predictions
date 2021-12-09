@@ -34,20 +34,21 @@ The rendered final report is located [here](https://github.com/UBC-MDS/olympic_m
 Please install [Docker](https://www.docker.com/get-started) if you have not already done so.  Then clone this repository and run the following command at the command line/terminal from the root directory of this project:
 
 ```bash
-docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest:v0.5.0 make -C /home/data_analysis
+docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest@sha256:693464b47beca5240bd52df7040030bfa1be4a66272900cb95b2636db5d27644 make -C /home/data_analysis all
 ```
 
 The local repository can be reset to the initial cloned state by running the following from the root directory of this project:
 
 ```bash
-docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest:v0.5.0 make -C /home/data_analysis clean
+docker run --rm --platform linux/amd64 -v $(PWD):/home/data_analysis squisty/olympic_medal_htest@sha256:693464b47beca5240bd52df7040030bfa1be4a66272900cb95b2636db5d27644 make -C /home/data_analysis clean
 ```
+Please note that the `Dockerfile` pins the versions of all the software packages listed under [Dependencies](#dependencies) except the R packages, which are instead based on the `rocker/tidyverse:4.1` Docker image the R packages of which are the same as our dependencies.  Since, however, we are not pinning the versions of those packages, the installed versions of the packages in the Docker image may change in the future.  We have chosen not to pin to exact versions of the R packages to avoid bringing in some unnecessary packages and over-complicate this project.
 
 #### 2\. Without using Docker
 
 The analysis can be reproduced by following these steps:
 
-1. Clone the GitHub repository and install the required [dependencies](#dependencies)
+1. Clone the GitHub repository and install the required [Dependencies](#dependencies)
 2. Navigate into the root directory of the cloned repository on your local machine
 3. Run the `Makefile` file with the following command:
 
@@ -67,23 +68,23 @@ make clean
 The Python environment required to run every python script can be found [here](https://github.com/UBC-MDS/olympic_medal_htest/blob/main/environment.yaml), or can be created using:
 
     - Python 3.9.6 and packages:
-        - docopt=0.6.2
-        - pandas=1.3.4
-        - altair=4.1.0
-        - altair_viewer=0.4.0
-        - altair_saver=0.5.0
-        - pandoc=2.16.2
+        - docopt=0.6.*
+        - pandas=1.3.*
+        - altair=4.1.*
+        - altair_viewer=0.4.*
+        - altair_saver=0.5.*
         
-    - R 4.1.2 and libraries:
-        - readr=2.1.0
-        - tidyverse=1.3.1
-        - here=1.0.1
+    - R 4.1.* and libraries:
+        - readr=2.1.*
+        - tidyverse=1.3.*
+        - here=1.0.*
         - knitr=1.36
-        - pracma=2.3.3
-        - broom=0.7.9
-        - infer=1.0.0
-        - docopt=0.7.1
-        - kableExtra=1.3.4
+        - pracma=2.3.*
+        - broom=0.7.*
+        - infer=1.0.*
+        - docopt=0.7.*
+        - kableExtra=1.3.*
+        - pandoc=2.16.*
 
     - GNU make 3.81
 
