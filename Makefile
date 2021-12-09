@@ -2,7 +2,7 @@
 # author: Steven Leung, Brandon Lam, Sam Quist, Ruben De la Garza
 # date: 2021-12-02
 
-all : results/03_EDA.html results/04_htest.Rmd doc/05_final_report.html doc/05_final_report.md results/04_h0_dist.png
+all : doc/05_final_report.html doc/05_final_report.md
 
 # download data
 data/raw/olympics.csv : src/01_download_data.py
@@ -31,11 +31,17 @@ results/04_h0_dist.png : src/04_htest.R data/olympics_cleaned.csv
 	Rscript src/04_htest.R --data="data/olympics_cleaned.csv" --saving_path="results";
 	Rscript -e "rmarkdown::render('results/04_htest.Rmd')"
 
+results/04_htest.Rmd: results/04_h0_dist.png results/04_p_value.rds results/04_summary.rds
+
 # generate final report
+results/03_EDA_final_report.Rmd: results/03_EDA.Rmd results/03_Figure1_age_hist.png
+results/04_htest_final_report.Rmd: results/04_htest.Rmd
+results/05_final_report.Rmd: results/04_htest_final_report.Rmd results/03_EDA_final_report.Rmd bibliography.bib
+
 doc/05_final_report.html \
-doc/05_final_report.md : results/03_EDA_final_report.Rmd results/04_htest_final_report.Rmd results/05_final_report.Rmd bibliography.bib results/04_p_value.rds
+doc/05_final_report.md : results/05_final_report.Rmd
 	Rscript -e "rmarkdown::render('results/05_final_report.Rmd', 'all', output_dir='doc')"
-	
+
 clean :
 	rm -rf data/raw/olympics.csv
 	rm -rf data/olympics_cleaned.csv
