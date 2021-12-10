@@ -54,7 +54,7 @@ We can see from the table above that there are 131,134 athletes under age of 25 
 knitr::include_graphics("../results/04_h0_dist.png")
 ```
 
-After generating the null distribution, and placing our observed test statistic on the plot in figure 1, we can see that the observed test statistics (red line) falls within the significance threshold (blue line), therefore we fail to reject $H_0$.
+After generating the null distribution, and placing our observed test statistic on the plot in figure 5, we can see that the observed test statistics (red line) falls within the significance threshold (blue line), therefore we fail to reject $H_0$.
 
 ```{r p_value result, echo=FALSE}
 kable(p_value, caption = "Table 4. p-value for the test.", col.names = 'p-value') |>
