@@ -61,6 +61,8 @@ kable(p_value, caption = "Table 4. p-value for the test.", col.names = 'p-value'
   kable_styling(full_width = FALSE, position = "left")
 ```
 
+The test statistic is -0.025, which is the portion of medal athletes under 25 minus the portion of medal athletes equal to or above 25. It is far outside the null distribution in the graph as our alternative hypothesis is "the proportion of medal athletes under 25 is greater than the proportion of medal athletes equal to or above 25", but the test statistic suggests that the portion of medal athletes under 25 is less than the portion of medal athletes equal to or above 25. This is a complete reverse of the alternative hypothesis.
+
 The p-value calculated is 1 and it is higher than the $\alpha$ of 0.05. It leads us to the same conclusion:
 
 We fail to reject the null hypothesis and conclude that it is not statistically significant that the proportion of athletes younger than 25 that win a medal is greater than the proportion of athletes of age 25 or older that win a medal.
