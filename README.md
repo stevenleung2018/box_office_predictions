@@ -62,7 +62,10 @@ The local repository can be reset to the initial cloned state by running:
 ```
 make clean
 ```
+### File dependency diagram
+Please see below for our file dependencies:
 
+![Dependency Diagram](Makefile.png)
 
 ## Dependencies
 
