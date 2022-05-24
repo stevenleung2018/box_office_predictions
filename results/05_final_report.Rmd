@@ -14,6 +14,9 @@ bibliography: ../bibliography.bib
 
 always_allow_html: true
 output:
+  pdf_document:
+    toc: true
+    toc_depth: '4'
   html_document:
     toc: true
     toc_depth: '4'
